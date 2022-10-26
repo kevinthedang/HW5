@@ -11,7 +11,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Breakout</title>
     <style>
         * {
@@ -371,7 +371,7 @@
             //function to handle game speed adjustments when we move our slider
             function adjustGameSpeed() {
                 //update the slider display         
-                labelButton.innerHTML = `Game Speed: ${document.getElementById("speed").value}`;
+                labelButton.innerHTML = document.getElementById("speed").value;
                 //update the game speed multiplier                
                 gameSpeed = document.getElementById("speed").value;
                 console.log(`Game Speed Changed to -> ${document.getElementById("speed").value}`);
@@ -495,7 +495,7 @@
             <div class="center-vert">
                 <button id="pause">Toggle Pause Game</button>
                 <br>
-                <label for="speed" id="labelSpeed">Game Speed: <span id="labelSpeed">1</span></label>
+                <label for="speed">Game Speed: <span id="labelSpeed">1</span></label>
                 <input type="range" name="speed" id="speed" min="0.05" max="4" step="0.05" value="1">
                 <br>
                 <table>
