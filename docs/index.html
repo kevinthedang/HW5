@@ -208,6 +208,7 @@
                         lives--;
                         if (lives <= 0) {
                             // draw message on the canvas
+                            lost = true;
                             checkWinState();
                             // pause game instead of reloading
                             togglePauseGame();
@@ -264,6 +265,7 @@
 
             // extra display variables   
             var win = false;  
+            var lost = false;
             var inMenu = true;
 
             // high score tracking variables
@@ -385,7 +387,7 @@
                 else
                     console.log("Cannot Toggle Pause -> Game has not started!")
                 //if we are not paused, we want to continue animating (hint: zyBook 8.9)
-                if (!pause && !win)
+                if (!pause && !win && !lost)
                     game = requestAnimationFrame(draw);
             };
 
