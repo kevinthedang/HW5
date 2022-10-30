@@ -367,6 +367,7 @@
                     console.log(xVal, yVal);
                     inMenu = !inMenu;
                     clearMenu();
+                    canvas.removeEventListener("click", startGameClick);
                 }
             };
 
